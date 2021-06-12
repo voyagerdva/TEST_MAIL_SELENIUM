@@ -1,21 +1,37 @@
-from Pages.PageObject import Page
+from Pages.PageBase import Base
+from Pages.PageStart import Start
+from Pages.PageAccount import Account
+
 
 class Interface():
     def __init__(self):
-        self.page = Page()
+        # self.base = Base()
+        # self.start = Start()
+        self.account = Account()
+        self.URL_LOCATOR = "https://mail.ru/?from=logout"
+
 
     def start(self):
-        self.page.runBrowser()
+        self.account.checkURL(self.URL_LOCATOR)
 
-    def login(self):
-        self.page.login()
+    def logInAccount(self):
+        self.account.logIn()
+
+    # def login(self):
+    #     self.logIn()
 
     def send(self):
-        self.page.sendEmail()
+        self.account.sendEmail()
 
     def close(self):
-        self.page.finish()
+        self.account.finish()
 
     def getDriver(self):
-        return self.page.getDriver()
+        return self.account.getDriver()
 
+
+interface = Interface()
+interface.start()
+interface.logInAccount()
+interface.send()
+interface.close()
