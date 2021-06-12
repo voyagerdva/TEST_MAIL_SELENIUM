@@ -17,7 +17,6 @@ class Account(Base):
         self.BUTTON_SEND_CLICK_LOCATOR = ".button2.button2_base.button2_primary.button2_compact.button2_hover-support.js-shortcut"
         self.BUTTON_SEND_APPLY_CLICK_LOCATOR = "button.base-1-2-63:nth-child(4) > span:nth-child(1)"
 
-        self.wait = WebDriverWait(self.getDriver(), 15)
 
     def sendEmail(self):
         self.buttonComposeMessage()
@@ -26,9 +25,8 @@ class Account(Base):
         self.buttonSendClick()
         self.buttonSendApplyClick()
 
-
     def buttonComposeMessage(self):
-        buttonComposeMessage = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.BUTTON_COMPOSE_MESSAGE_LOCATOR)))
+        buttonComposeMessage = WebDriverWait(self.getDriver(), 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.BUTTON_COMPOSE_MESSAGE_LOCATOR)))
         buttonComposeMessage.click()
 
     def inputEmailAddress(self):
@@ -43,10 +41,7 @@ class Account(Base):
         buttonSendClick = self.driver.find_element_by_css_selector(self.BUTTON_SEND_CLICK_LOCATOR)
         buttonSendClick.click()
 
-
     def buttonSendApplyClick(self):
         time.sleep(10)
-        # buttonSendApplyClick = WebDriverWait(self.getDriver(), 40).until(EC.presence_of_element_located((By.CSS_SELECTOR, "span.button2_base:nth-child(1) > span:nth-child(1)")))
         buttonSendApplyClick = WebDriverWait(self.getDriver(), 40).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.BUTTON_SEND_APPLY_CLICK_LOCATOR)))
         buttonSendApplyClick.click()
-
