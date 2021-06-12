@@ -1,22 +1,17 @@
-import time
 import unittest
-from Pages.InterfaceMail import Interface as IF
+from Pages.PageStart import Start
+from Pages.PageAccount import Account
 
 class testSendEmail(unittest.TestCase):
 
-    def setUp(self):
-        self.page = IF()
-
     def test_sendEmail(self):
-        self.page.start()
-        self.page.login()
-        self.page.send()
+        startPage = Start()
+        startPage.goURL()
+        startPage.logIn()
 
-        time.sleep(2)
-        assert "Письмо отправлено" in self.page.getDriver().page_source
-
-    def tearDown(self):
-        self.page.close()
+        accountPage = Account(startPage.getDriver())
+        accountPage.sendEmail()
+        accountPage.finish()
 
 if __name__ == "__main__":
     unittest.main()

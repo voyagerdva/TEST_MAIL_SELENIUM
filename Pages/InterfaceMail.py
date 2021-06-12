@@ -5,13 +5,13 @@ from Pages.PageAccount import Account
 
 class Interface():
     def __init__(self):
-        # self.base = Base()
-        # self.start = Start()
+        self.base = Base(None)
+        self.start = Start()
         self.account = Account()
-        self.URL_LOCATOR = "https://mail.ru/?from=logout"
 
 
-    def start(self):
+
+    def begin(self):
         self.account.checkURL(self.URL_LOCATOR)
 
     def logInAccount(self):
@@ -31,7 +31,7 @@ class Interface():
 
 
 interface = Interface()
-interface.start()
+interface.begin()
 interface.logInAccount()
 interface.send()
 interface.close()

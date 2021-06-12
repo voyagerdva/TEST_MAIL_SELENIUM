@@ -339,3 +339,57 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileNjMxe2\\search.json.mozlz4", (void 0)))
 1623507320349	Marionette	INFO	Listening on port 51362
 1623507320420	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623507465829	geckodriver	INFO	Listening on 127.0.0.1:61007
+1623507469024	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileidAbMt"
+1623507469885	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileidAbMt\\search.json.mozlz4", (void 0)))
+1623507473561	Marionette	INFO	Listening on port 61015
+1623507473847	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1623507555604	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1623507559811	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1623507577507	Marionette	INFO	Stopped listening on port 61015
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xAB0006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xAB0006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1623508458343	geckodriver	INFO	Listening on 127.0.0.1:56397
+1623508461399	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofilemVsaZo"
+1623508462215	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofilemVsaZo\\search.json.mozlz4", (void 0)))
+1623508465617	Marionette	INFO	Listening on port 56405
+1623508465709	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623508559090	Marionette	INFO	Stopped listening on port 56405
+3508496186	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileCEjDaT"
+1623508496707	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileCEjDaT\\search.json.mozlz4", (void 0)))
+1623508500659	Marionette	INFO	Listening on port 55067
+1623508501001	Marionette	WARN	TLS certificate errors will be ignored for this session
+1623508621507	Marionette	INFO	Stopped listening on port 55067
+1623510075730	geckodriver	INFO	Listening on 127.0.0.1:49224
+1623510078822	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileN8UAGR"
+1623510079780	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileN8UAGR\\search.json.mozlz4", (void 0)))
+1623510083600	Marionette	INFO	Listening on port 49232
+1623510083641	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 2168, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1623510578924	Marionette	INFO	Stopped listening on port 49232
+ground" "-no-remote" "-profile" "C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileUnBLLq"
+1623510104890	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\voyag\\AppData\\Local\\Temp\\rust_mozprofileUnBLLq\\search.json.mozlz4", (void 0)))
+1623510108977	Marionette	INFO	Listening on port 60533
+1623510109149	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1623510576318	Marionette	INFO	Stopped listening on port 60533
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

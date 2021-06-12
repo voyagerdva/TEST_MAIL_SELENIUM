@@ -1,16 +1,13 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import time
 from Pages.PageBase import Base
-from Pages.PageStart import Start
 
-class Account(Start):
+class Account(Base):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, driver):
+        super().__init__(driver)
         self.emailAddress = "mariner-9@yandex.ru"
         self.emailTopic = "Topic - Hello from Selenium"
         self.USER_NAME_LOCATOR = ".email-container .email-input-container .email-input"
@@ -21,15 +18,6 @@ class Account(Start):
         self.BUTTON_SEND_APPLY_CLICK_LOCATOR = "button.base-1-2-63:nth-child(4) > span:nth-child(1)"
 
         self.wait = WebDriverWait(self.getDriver(), 15)
-
-    def checkURL(self, URL):
-        if "mail.ru" in self.driver.current_url:
-            self.logIn()
-        else:
-            self.goURL(URL)
-
-    # def logIn(self):
-    #     self.logIn()
 
     def sendEmail(self):
         self.buttonComposeMessage()
@@ -44,7 +32,7 @@ class Account(Start):
         buttonComposeMessage.click()
 
     def inputEmailAddress(self):
-        inputEmailAddress = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.EMAIL_ADDRESS_LOCATOR)))
+        inputEmailAddress = WebDriverWait(self.getDriver(), 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.EMAIL_ADDRESS_LOCATOR)))
         inputEmailAddress.send_keys(self.emailAddress)
 
     def inputEmailTopic(self):
@@ -57,10 +45,8 @@ class Account(Start):
 
 
     def buttonSendApplyClick(self):
-        buttonSendApplyClick = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, self.BUTTON_SEND_APPLY_CLICK_LOCATOR)))
+        time.sleep(10)
+        # buttonSendApplyClick = WebDriverWait(self.getDriver(), 40).until(EC.presence_of_element_located((By.CSS_SELECTOR, "span.button2_base:nth-child(1) > span:nth-child(1)")))
+        buttonSendApplyClick = WebDriverWait(self.getDriver(), 40).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.BUTTON_SEND_APPLY_CLICK_LOCATOR)))
         buttonSendApplyClick.click()
 
-
-
-# login = Account()
-# login.
